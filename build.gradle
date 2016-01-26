@@ -1,0 +1,37 @@
+group 'hcs'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+//防止乱码
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+repositories {
+    maven { url "http://maven.oschina.net/content/groups/public/" }
+    maven { url "https://repo.spring.io/libs-release" }
+    jcenter()
+    mavenCentral()
+}
+
+
+dependencies {
+    def bootVersion = "+"
+    compile "org.springframework.boot:spring-boot-autoconfigure:${bootVersion}",
+            "org.springframework.boot:spring-boot-starter-web:${bootVersion}"
+}
+group 'hcs'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

@@ -1,0 +1,16 @@
+spring:
+  profiles: 
+    active: dev
+---
+spring: 
+  profiles: dev
+  view:
+    prefix: /WEB-INF/web/
+    suffix: .jsp
+  http:
+    encoding:
+      charset: utf-8
+    gzip:
+      enabled: true
+  mvc:
+    date-format: yyyy-MM-dd
