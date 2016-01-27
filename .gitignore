@@ -4,3 +4,7 @@
 /.idea
 /build
 /out
+/bin/
+/.classpath
+/.settings
+/bin
